@@ -147,9 +147,10 @@ class Main extends Sprite {
 			game.height = Math.ceil(stageHeight / game.zoom);
 			game.skipSplash = true; // if the default flixel splash screen should be skipped
 		};
+		
+		SUtil.doTheCheck();
 
 		ClientPrefs.loadDefaultKeys();
-
 		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
 
 		fpsVar = new FPS(10, 3, 0xFFFFFF);

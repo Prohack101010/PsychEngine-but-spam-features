@@ -147,6 +147,8 @@ class ClientPrefs { //default settings if it can't find a save file containing y
 	public static var checkForUpdates:Bool = true;
 	public static var showRendered:Bool = false;
 	public static var comboStacking = true;
+	public static var hitboxalpha:Float = 0.2; //someone request this lol
+	public static var VirtualPadAlpha:Float = 0.75;
 
 	//Note HSV
 	public static var arrowHSV:Array<Array<Int>> = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
@@ -383,6 +385,9 @@ class ClientPrefs { //default settings if it can't find a save file containing y
 		FlxG.save.data.checkForUpdates = checkForUpdates;
 		FlxG.save.data.showRendered = showRendered;
 		FlxG.save.data.comboStacking = comboStacking;
+		
+		FlxG.save.data.hitboxalpha = hitboxalpha;
+		FlxG.save.data.VirtualPadAlpha = VirtualPadAlpha;
 
 		//Offset and Window stuff
 		FlxG.save.data.ratingOffset = ratingOffset;
@@ -516,6 +521,12 @@ class ClientPrefs { //default settings if it can't find a save file containing y
 		}
 		if(FlxG.save.data.hitsoundVolume != null) {
 			hitsoundVolume = FlxG.save.data.hitsoundVolume;
+		}
+		if(FlxG.save.data.hitboxalpha != null) {
+			hitboxalpha = FlxG.save.data.hitboxalpha;
+		}
+		if(FlxG.save.data.VirtualPadAlpha != null) {
+			VirtualPadAlpha = FlxG.save.data.VirtualPadAlpha;
 		}
 		if(FlxG.save.data.hitsoundType != null) {
 			hitsoundType = FlxG.save.data.hitsoundType;
