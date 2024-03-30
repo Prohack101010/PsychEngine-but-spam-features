@@ -147,6 +147,8 @@ class ClientPrefs { //default settings if it can't find a save file containing y
 	public static var checkForUpdates:Bool = true;
 	public static var showRendered:Bool = false;
 	public static var comboStacking = true;
+	public static var hitboxmode:String = 'New';  //starting new way to change between hitboxes yay
+	
 	public static var hitboxalpha:Float = 0.2; //someone request this lol
 	public static var VirtualPadAlpha:Float = 0.75;
 
@@ -386,9 +388,10 @@ class ClientPrefs { //default settings if it can't find a save file containing y
 		FlxG.save.data.showRendered = showRendered;
 		FlxG.save.data.comboStacking = comboStacking;
 		
+		FlxG.save.data.hitboxmode = hitboxmode;
 		FlxG.save.data.hitboxalpha = hitboxalpha;
 		FlxG.save.data.VirtualPadAlpha = VirtualPadAlpha;
-
+		
 		//Offset and Window stuff
 		FlxG.save.data.ratingOffset = ratingOffset;
 		FlxG.save.data.perfectWindow = perfectWindow;
@@ -521,6 +524,9 @@ class ClientPrefs { //default settings if it can't find a save file containing y
 		}
 		if(FlxG.save.data.hitsoundVolume != null) {
 			hitsoundVolume = FlxG.save.data.hitsoundVolume;
+		}
+		if(FlxG.save.data.hitboxmode != null) {
+			hitboxmode = FlxG.save.data.hitboxmode;
 		}
 		if(FlxG.save.data.hitboxalpha != null) {
 			hitboxalpha = FlxG.save.data.hitboxalpha;
