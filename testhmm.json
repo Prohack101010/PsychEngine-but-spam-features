@@ -50,13 +50,6 @@
       "type": "haxelib",
       "version": null
     },
-    {
-       "name":"hscript-ex",
-       "type":"git",
-       "dir":null,
-       "ref":"master",
-       "url":"https://github.com/ianharrigan/hscript-ex"
-   },
    {
       "name": "hxdiscord_rpc",
       "type": "git",
@@ -70,13 +63,6 @@
       "dir": null,
       "ref": "master",
       "url": "https://github.com/nebulazorua/linc_luajit"
-    },
-    {
-      "name":"extension-androidtools",
-      "type":"git",
-      "dir":null,
-      "ref":"main",
-      "url":"https://github.com/MaysLastPlay77/extension-androidtools"
-   }
+    }
   ]
 }
