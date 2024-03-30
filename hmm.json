@@ -3,22 +3,22 @@
     {
       "name": "lime",
       "type": "haxelib",
-      "version": null
+      "version":"7.9.0"
     },
     {
       "name": "openfl",
       "type": "haxelib",
-      "version": null
+      "version":"9.1.0"
     },
     {
       "name": "flixel",
       "type": "haxelib",
-      "version": null
+      "version":"4.11.0"
     },
     {
       "name": "flixel-addons",
       "type": "haxelib",
-      "version": null
+      "version":"2.11.0"
     },
     {
       "name": "flixel-tools",
@@ -36,14 +36,19 @@
       "version": "4.2.1"
     },
     {
-      "name": "hxCodec",
-      "type": "haxelib",
-      "version": "2.5.1"
+      "name":"tjson",
+      "type":"haxelib",
+      "version":null
     },
     {
-      "name": "hscript",
-      "type": "haxelib",
-      "version": null
+      "name":"hxjsonast",
+      "type":"haxelib",
+      "version":null
+    },
+    {
+      "name":"hscript",
+      "type":"haxelib",
+      "version":null
     },
     {
       "name": "hxcpp-debug-server",
@@ -58,18 +63,23 @@
        "url":"https://github.com/ianharrigan/hscript-ex"
    },
    {
-      "name": "hxdiscord_rpc",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
-    },
-    {
       "name": "linc_luajit",
       "type": "git",
       "dir": null,
       "ref": "master",
       "url": "https://github.com/Sirox228/linc_luajit"
+    },
+    {
+      "name": "hxCodec",
+      "type": "haxelib",
+      "version": "2.5.1"
+    },
+    {
+      "name": "hxdiscord_rpc",
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
     },
     {
       "name":"extension-androidtools",
