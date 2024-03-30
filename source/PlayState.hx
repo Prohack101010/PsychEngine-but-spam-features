@@ -597,7 +597,6 @@ class PlayState extends MusicBeatState
 							var height = Std.parseInt(parts[1]);
 
 							if (width != null && height != null) {
-						CoolUtil.resetResScale(width, height);
 								FlxG.resizeGame(width, height);
 						lime.app.Application.current.window.width = width;
 						lime.app.Application.current.window.height = height;
@@ -752,6 +751,12 @@ class PlayState extends MusicBeatState
 
 		FlxG.cameras.setDefaultDrawTarget(camGame, true);
 		CustomFadeTransition.nextCamera = camOther;
+		
+		#if android
+		addAndroidControls();
+		androidc.visible = true;
+		androidc.alpha = 0.000001;		
+		#end
 
 		persistentUpdate = true;
 		persistentDraw = true;
@@ -3338,6 +3343,11 @@ class PlayState extends MusicBeatState
 			callOnLuas('onStartCountdown', []);
 			return;
 		}
+		#if android
+			androidc.visible = true;
+			if (checkHitbox != true) androidc.alpha = 1;
+			//
+		 #end
 
 		inCutscene = false;
 		var ret:Dynamic = callOnLuas('onStartCountdown', [], false);
@@ -4367,6 +4377,11 @@ class PlayState extends MusicBeatState
 			}
 			paused = false;
 			callOnLuas('onResume', []);
+			
+			#if android
+			androidc.y = 0;
+			//androidc.visible = true;
+			#end
 
 			#if desktop
 			if (startTimer != null && startTimer.finished)
@@ -5385,8 +5400,11 @@ if (ClientPrefs.showNPS && (notesHitDateArray.length > 0 || oppNotesHitDateArray
 			FlxG.sound.music.pause();
 			vocals.pause();
 		}
-		if (!ClientPrefs.charsAndBG) openSubState(new PauseSubState(0, 0));
-		if (ClientPrefs.charsAndBG) openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+		#if android
+			androidc.y = 720;
+			//androidc.visible = true;
+			#end
+		openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 		//}
 
 		#if desktop
